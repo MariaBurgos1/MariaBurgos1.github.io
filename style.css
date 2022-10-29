@@ -1,0 +1,528 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #E8E8E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background:#4E069A;
+  border-radius: 5px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 13px;
+  font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+body::-moz-selection {
+  background-color:blueviolet;
+  color: hsl(0deg, 0%, 98%);
+}
+
+body::selection {
+  background-color: blueviolet;
+  color: hsl(0deg, 0%, 98%);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+  background-color: #E6BBFF;
+	margin-top: 50px;
+}
+
+.logo {
+  line-height: 0;
+  width: 100px;
+	height: auto;
+
+  margin-right: 4rem;
+  align-items: center;
+}
+.logo--bag {
+  margin: 0 auto;
+  width: 1.5rem;
+}
+.logo--bag:hover::before {
+  display: none;
+}
+.logo--search {
+  margin: 0 auto;
+  width: 1.5rem;
+}
+
+.hidden:hover::before {
+  display: none;
+}
+
+header {
+  width: 100%;
+  background: hsla(0deg, 0%, 100%, 0.9);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 1000;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 0.2px solid rgba(212, 212, 212, 0.575;
+}
+header nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: 6rem;
+}
+header nav ul {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul li {
+  height: 100%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+  padding: 0;
+}
+header nav ul li a {
+  display: flex;
+  align-items: center;
+  color: hsl(0deg, 0%, 33%);
+  transition: 0.6s ease;
+  position: relative;
+  height: 6rem;
+  opacity: 0.6;
+}
+header nav ul li a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 0rem;
+  width: 100%;
+  height: 0.2rem;
+  transform: scale(0);
+  transition: transform 0.4s ease-in-out;
+  background-color: hsl(215deg, 100%, 70%);
+}
+header nav ul li a:hover {
+  opacity: 1;
+}
+
+.main-menu__link:hover::before {
+  transform: scale(2);
+}
+
+.toggle-menu {
+  display: none;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  width: 4rem;
+}
+.toggle-menu__line {
+  display: block;
+  width: 2.5rem;
+  height: 0.3rem;
+  margin: 0.5rem auto;
+  transition: all 0.3s ease-in-out;
+  background-color: hsl(215deg, 100%, 70%);
+  border-radius: 2rem;
+  right: 30%;
+}
+
+.container-slider {
+  padding: 0;
+  width: 80%;
+  max-width: 1100px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 7rem;
+  margin: 7rem auto 0;
+}
+
+.slider {
+  display: flex;
+  width: 500%;
+  height: 400px;
+  margin-left: -100%;
+}
+.slider__section {
+  width: 100%;
+}
+.slider__img {
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+  max-width: 100%;
+}
+.slider__btn {
+  font-size: 4rem;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 40%;
+  cursor: pointer;
+  color:blueviolet;
+  opacity: 0.5;
+  transition: opacity 0.4s ease-in-out;
+}
+.slider__btn:hover {
+  opacity: 1;
+  color: #570281;
+}
+.slider__btn--left {
+  left: 2%;
+}
+.slider__btn--right {
+  right: 2%;
+}
+
+.product-item {
+  width: 100%;
+  height: 350px;
+  border-radius: 2rem;
+  background-color: #f6faff;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.product-item__product1 {
+  height: 100%;
+  height: 400px;
+}
+.product-item__texts {
+	color: aliceblue;
+  height: 100%;
+  width: 50%;
+  margin-top: -35rem;
+  padding: 4rem 50rem;
+}
+.product-item__picture {
+  width: 100%;
+  height: 350px;
+  background: url(../img/fundas/behar-zenuni-797461-unsplash-scaled.jpg) no-repeat;
+  background-size: 550px;
+  background-position: right;
+}
+
+.product-item2 {
+  width: 100%;
+  height: 350px;
+  border-radius: 2rem;
+  background-color: hsla(0deg, 0%, 0%, 0.78);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.product-item2 {
+  height: 400px;
+}
+.product-item2 .subtitle {
+  color: hsl(0deg, 0%, 98%);
+}
+.product-item2__paragraph {
+  color: hsl(0deg, 0%, 98%);
+}
+.product-item2__product1 {
+  height: 100%;
+  height: 400px;
+}
+.product-item2__texts {
+  text-align: right;
+  color: hsl(0deg, 0%, 98%);
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  padding: 40rem 7rem;
+}
+.product-item2__picture {
+  width: 100%;
+  height: 450px;
+  background: url(../img/impresora.png) no-repeat;
+  background-size: 850px;
+}
+.product-item2__picture3 {
+  width: 100%;
+  height: 450px;
+  background: url(../img/impresora.png) no-repeat;
+  background-size: 1200px;
+}
+
+
+
+.subtitle1 {
+	color: aliceblue;
+  font-size: 3.5rem;
+  margin-bottom: 0rem;
+	padding-top: 20px;
+	}
+.subtitle {
+  font-size: 3.5rem;
+  margin-bottom: 0rem;
+}
+.container1 {
+  width: 90%;
+  max-width: 1200px;
+  margin: 10 auto;
+  overflow: hidden;
+  padding: 30px 25px;
+  margin-bottom: 0rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 10 auto;
+  overflow: hidden;
+  padding: 400rem 0;
+  margin-bottom: 0rem;
+}
+
+.cta {
+  position: relative;
+  display: inline-block;
+  background-color: hsl(215deg, 100%, 70%);
+  border: 2px solid hsl(215deg, 100%, 70%);
+  justify-self: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 13px 30px;
+  font-size: 1.8rem;
+  transition: color 0.5s, background 0.5s;
+}
+.cta:hover {
+  color: hsl(215deg, 100%, 70%);
+  background-color: transparent;
+}
+.cta--dark {
+  color: hsl(215deg, 100%, 70%);
+}
+
+.cta.round {
+  border-radius: 30px;
+}
+
+.listado {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.listado img {
+  max-width: 100%;
+}
+.listado div {
+  border: solid 1px #256D85;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/*---------------FOOTER-------------*/
+.footer {
+  background-color: hsla(0deg, 0%, 0%, 0.78);
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 60px;
+}
+.footer__title {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  background: #FFFEFE;
+  color:aliceblue;
+}
+
+
+.footer__inputs {
+  margin-top: 10px;
+  display: flex;
+  overflow: hidden;
+}
+.footer__input {
+  background-color:#823EDE;
+  height: 50px;
+  display: block;
+  padding-left: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  margin-right: 16px;
+}
+
+
+.footer__copyright {
+  font-weight: 300;
+}
+.footer__icons {
+  font-size: 4rem;
+  padding: 0 2rem;
+  margin-bottom: 10px;
+  color: hsla(0deg, 0%, 100%, 0.9);
+}
+.footer__img {
+  width: 40px;
+}
+
+.nav--footer {
+  padding-bottom: 20px;
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: row;
+  height: 100%;
+}
+.nav__link--footer {
+  display: flex;
+  margin: 0;
+  margin-right: 20px;
+  flex-wrap: wrap;
+}
+.nav__links {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 98%);
+  font-size: 1.8rem;
+}
+.nav__linke {
+  gap: 2em;
+}
+.nav__items {
+  list-style: none;
+}
+
+/*---------------MEDIAQUERYS--------------*/
+@media screen and (max-width: 900px) {
+  .toggle-menu {
+    display: block;
+  }
+  .toggle-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .toggle-menu.active span:nth-child(1) {
+    transform: translateY(0.8rem) rotate(135deg);
+  }
+  .toggle-menu.active span:nth-child(3) {
+    transform: translateY(-0.8rem) rotate(-135deg);
+  }
+  .subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 0rem;
+  }
+  .cta {
+    position: relative;
+    display: inline-block;
+    background-color: hsl(215deg, 100%, 70%);
+    border: 2px solid hsl(215deg, 100%, 70%);
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 11px 25px;
+    font-size: 1.5rem;
+    transition: color 0.5s, background 0.5s;
+  }
+  .cta:hover {
+    color: hsl(215deg, 100%, 70%);
+    background-color: transparent;
+  }
+  .cta--dark {
+    color: hsl(215deg, 100%, 70%);
+  }
+  .cta.round {
+    border-radius: 30px;
+  }
+  .main-menu.active {
+    left: 0;
+  }
+  .nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .main-menu {
+    position: fixed;
+    left: -120%;
+    top: 6.1rem;
+    flex-direction: column;
+    background-color: hsla(0deg, 0%, 100%, 0.9);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 1px 1px 20px 2px rgba(100, 100, 100, 0.1);
+    width: 100%;
+    height: 32.7rem;
+    text-align: left;
+    transition: 0.3s;
+    gap: 0;
+  }
+  .main-menu__item {
+    font-size: 1.8rem;
+    justify-content: left;
+    width: 100%;
+    line-height: 4rem;
+    border-bottom: 0.2px solid rgba(212, 212, 212, 0.575);
+  }
+  .main-menu__item:hover {
+    font-size: 1.8rem;
+    background-color: hsl(211deg, 88%, 84%);
+  }
+  .main-menu__link {
+    display: block;
+    width: 100%;
+    height: 4rem;
+    left: 10%;
+    color: hsl(0deg, 0%, 33%);
+  }
+  .main-menu__link:hover {
+    opacity: 0.7;
+  }
+  .main-menu__link:hover::before {
+    display: none;
+  }
+ 
+  
+  .product-item {
+    width: 100%;
+    height: 350px;
+    border-radius: 2rem;
+    background-color: #f6faff;
+    overflow: hidden;
+  }
+  .product-item__product1 {
+    height: 100%;
+  }
+  .product-item__texts {
+    background-color: rgba(250, 251, 252, 0.231372549);
+    color: hsl(0deg, 0%, 98%);
+    height: 80%;
+    width: 100%;
+    margin-top: -32rem;
+    padding: 4rem 7rem;
+  }
+  .product-item__picture {
+    background: url(../img/impresora.png) no-repeat;
+    background-size: 800px 700px;
+  }
+ 
+  
+  .footer__title {
+    font-size: 2rem;
+  }
+  .footer__newsletter {
+    font-size: 1.6rem;
+  }
+}
